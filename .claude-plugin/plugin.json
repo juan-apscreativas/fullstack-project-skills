@@ -1,0 +1,19 @@
+{
+  "name": "fullstack-project-skills",
+  "version": "1.0.0",
+  "description": "Skills for full-stack project development: Laravel Modular Monolith backend, Next.js 15 Feature-Based frontend, project orchestration from PRD, API contract management, and Cloudflare Workers deployment.",
+  "author": {
+    "name": "Project Team"
+  },
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "nextjs",
+    "full-stack",
+    "modular-monolith",
+    "feature-based",
+    "prd",
+    "cloudflare",
+    "architecture"
+  ]
+}

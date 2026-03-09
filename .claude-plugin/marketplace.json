@@ -1,0 +1,16 @@
+{
+  "name": "fullstack-skills",
+  "owner": {
+    "name": "Project Team"
+  },
+  "metadata": {
+    "description": "Skills for full-stack project development with Laravel and Next.js"
+  },
+  "plugins": [
+    {
+      "name": "fullstack-project-skills",
+      "source": "./",
+      "description": "Skills for full-stack project development: Laravel Modular Monolith backend, Next.js Feature-Based frontend, project orchestration from PRD, API contract management, and Cloudflare Workers deployment."
+    }
+  ]
+}
