@@ -158,3 +158,11 @@ If a breaking change reflects a significant architectural decision (API versioni
 - **`[breaking]` is a temporary state, never a resting state** — resolve it before ending the session
 - **Both repos must compile independently** — never leave one repo broken waiting for the other
 - **Documentation syncs with code** — map update goes in the same commit as the implementation
+
+## Coexistence with Superpowers
+
+This skill activates when there are **changes to the API contract between backend and frontend**.
+Superpowers has no equivalent for cross-repo coordination.
+This skill complements Superpowers' executing-plans: when a plan task involves an API change, this skill activates to synchronize the contract.
+
+If Superpowers is not installed, this skill works independently.

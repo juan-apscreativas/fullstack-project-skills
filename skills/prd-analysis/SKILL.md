@@ -1,7 +1,10 @@
 ---
 name: prd-analysis
 description: >
-  This skill should be used when the user asks to "analyze a PRD", "identify modules from requirements", "extract features from a spec", "assign complexity levels", "decompose a product requirements document", "identify business rules from PRD", or "plan architecture from a document".
+  Use when a PRD document needs to be decomposed into modules, features,
+  complexity levels, and dependencies. Typically invoked by project-orchestration,
+  not directly. Analyzes an existing PRD — does NOT create or brainstorm
+  requirements (use brainstorming skill for that).
 ---
 
 # PRD Analysis
@@ -155,3 +158,12 @@ Generate `docs/PRD-SUMMARY.md` with this structure:
 - **Business rules are invariants** — anything the system must never allow belongs in the rules section
 - **Boundaries define independence** — a well-drawn module/feature boundary means no circular dependencies
 - **PRD-SUMMARY is the stable reference** — once generated, it doesn't change unless the PRD changes
+
+## Coexistence with Superpowers
+
+This skill activates during the **PRD analysis** phase (sub-step of project-orchestration).
+Superpowers handles ideation and spec creation (brainstorming).
+This skill handles transforming an existing PRD into a structured module/feature inventory.
+
+If Superpowers is not installed, this skill works independently
+receiving a PRD provided directly by the user.

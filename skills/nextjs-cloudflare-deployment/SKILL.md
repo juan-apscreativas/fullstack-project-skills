@@ -278,3 +278,11 @@ Replaces (for Cloudflare targets): the Docker/standalone deployment sections of 
 ## When to Use
 
 This skill applies when the Next.js 15 application must be deployed to Cloudflare Workers. It does not apply to other hosting providers (Docker, Railway, Fly.io, Render) — for those, the standard `output: 'standalone'` + Docker path in `nextjs-feature-based` remains correct.
+
+## Coexistence with Superpowers
+
+This skill activates during the **Cloudflare Workers deployment** phase.
+Superpowers does not cover deployment — its scope ends at implementation and merge.
+This skill is independent and has no overlap with any Superpowers skill.
+
+If Superpowers is not installed, this skill works identically.

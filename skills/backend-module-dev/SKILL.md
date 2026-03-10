@@ -1,7 +1,11 @@
 ---
 name: backend-module-dev
 description: >
-  This skill should be used when the user asks to "add a backend feature", "create a Laravel module", "implement an API endpoint", "write a service layer", "create an Eloquent model", "implement a domain event", "add a ModuleApi", "write a Pest test", or "implement backend logic in PHP".
+  Use when implementing a backend task in the Laravel Modular Monolith: adding
+  a module, creating an endpoint, writing a service, implementing a domain event,
+  or fixing a backend bug. Defines technical standards and file structure —
+  NOT the testing methodology (use test-driven-development for TDD discipline)
+  or execution framework (use executing-plans for task sequencing).
 ---
 
 # Backend Module Development
@@ -154,3 +158,16 @@ Scramble reads Form Requests (parameters) and API Resources (response shape) aut
 - **Tests are not optional** — every new use case needs at least one feature test
 - **Scramble is the API contract** — if it's not in `/docs/api`, it doesn't exist for the frontend
 - **Documentation in the same commit** — a code change without docs is an incomplete change
+
+## Coexistence with Superpowers
+
+This skill activates during the **backend implementation** phase (within each plan task).
+Superpowers handles the TDD methodology (test-driven-development) and the execution framework (executing-plans).
+This skill handles the technical standards: Laravel file structure, Pest conventions, Sail, Scramble, and modular architecture rules.
+
+When both are active:
+- Superpowers TDD dictates the **order**: write test → watch it fail → implement → watch it pass
+- This skill dictates the **technical content**: Pest with RefreshDatabase, expect() API, factories, what to mock
+
+If Superpowers is not installed, this skill works independently
+including its own testing instructions (without strict TDD enforcement).

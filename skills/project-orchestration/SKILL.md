@@ -1,7 +1,10 @@
 ---
 name: project-orchestration
 description: >
-  This skill should be used when the user asks to "initialize a new project from a PRD", "scaffold a full-stack project", "create backend and frontend repos", "set up a new project", "generate CLAUDE.md from requirements", "start a project from scratch", or "orchestrate project creation".
+  Use AFTER a PRD or design spec has been approved. Scaffolds a full-stack
+  project (Laravel + Next.js) from an existing PRD, creates backend and frontend
+  repos, and generates the root CLAUDE.md. NOT for ideation or brainstorming —
+  use the brainstorming skill first if no PRD exists.
 ---
 
 # Project Orchestration
@@ -135,3 +138,17 @@ If frontend is needed and the folder does not yet exist:
 - **Offline = no scaffolding** — partial initialization is worse than none
 - **Map = contract** — the Module/Feature Map is the single source of truth for the backend↔frontend contract; it must stay accurate at all times
 - **One commit includes everything** — code, structure, and documentation ship together
+
+## Coexistence with Superpowers
+
+This skill activates during the **project scaffolding** phase (after brainstorming).
+Superpowers handles ideation (brainstorming), planning (writing-plans), and the execution framework.
+This skill handles repo creation, root CLAUDE.md generation, and the modular project structure.
+
+Expected flow with Superpowers:
+1. `brainstorming` → explores the idea and produces a spec/PRD
+2. `project-orchestration` → takes the PRD and scaffolds the project
+3. `writing-plans` → plans the implementation of features
+
+If Superpowers is not installed, this skill works independently
+and the user must provide a PRD directly.

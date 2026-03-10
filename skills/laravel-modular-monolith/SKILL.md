@@ -230,3 +230,11 @@ Works well with: `prd-analysis`, `backend-module-dev`, `api-contract-sync`, `pro
 ## When to Use
 
 This skill applies when working in the Laravel backend repository — creating modules, implementing services, writing tests, configuring Sail, managing database migrations, or designing inter-module communication patterns. For frontend work, use `nextjs-feature-based`. For cross-repo coordination, use `api-contract-sync`.
+
+## Coexistence with Superpowers
+
+This skill activates when working in the Laravel backend repository.
+Superpowers has no equivalent — it is technology-agnostic and does not define Laravel architecture conventions.
+This skill complements any Superpowers phase by applying Laravel Modular Monolith conventions.
+
+If Superpowers is not installed, this skill works identically.

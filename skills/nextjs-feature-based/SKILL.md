@@ -260,3 +260,11 @@ Works well with: `prd-analysis`, `frontend-feature-dev`, `api-contract-sync`, `p
 ## When to Use
 
 This skill applies when working in the Next.js frontend repository — creating features, implementing components, writing tests, creating Storybook stories, configuring Docker, or designing state management patterns. For backend work, use `laravel-modular-monolith`. For cross-repo coordination, use `api-contract-sync`.
+
+## Coexistence with Superpowers
+
+This skill activates when working in the Next.js frontend repository.
+Superpowers has no equivalent — it is technology-agnostic and does not define Next.js architecture conventions.
+This skill complements any Superpowers phase by applying Next.js 15 Feature-Based conventions.
+
+If Superpowers is not installed, this skill works identically.

@@ -1,7 +1,12 @@
 ---
 name: frontend-feature-dev
 description: >
-  This skill should be used when the user asks to "add a frontend feature", "create a React component", "implement a Next.js page", "add a Zustand store", "write a Zod schema", "implement data fetching", "create a Storybook story", "write a Vitest test", or "build a UI form or component".
+  Use when implementing a frontend task in the Next.js 15 Feature-Based
+  architecture: adding a feature, creating a component, implementing a page,
+  adding a Zustand store, or fixing a frontend bug. Defines technical standards
+  and file structure — NOT the testing methodology (use test-driven-development
+  for TDD discipline) or execution framework (use executing-plans for task
+  sequencing).
 ---
 
 # Frontend Feature Development
@@ -200,3 +205,25 @@ npm run storybook      # Storybook starts without errors (manual check)
 - **Selectors prevent re-render cascades** — always subscribe to slices, not full stores
 - **Docker must always build** — the image is the deployable artifact; a broken build = broken deployment
 - **Documentation in the same commit** — a code change without docs is an incomplete change
+
+## Coexistence with Superpowers
+
+This skill activates during the **frontend implementation** phase (within each plan task).
+Superpowers handles the TDD methodology (test-driven-development) and the execution framework (executing-plans).
+This skill handles the technical standards: feature-based structure, Server/Client boundary, shadcn/ui, Zustand, Zod, Vitest+RTL, Storybook, and Docker.
+
+When both are active:
+- Superpowers TDD dictates the **order**: write test → watch it fail → implement → watch it pass
+- This skill dictates the **technical content**: Vitest with RTL, what to test (Client Components, hooks, stores, schemas), Storybook stories
+
+If Superpowers is not installed, this skill works independently
+including its own testing instructions (without strict TDD enforcement).
+
+## Coexistence with frontend-design
+
+Both skills may activate when building UI components or pages.
+The `frontend-design` skill handles **visual aesthetics**: typography, color, motion, and spatial composition.
+This skill handles **architecture and technical standards**: file structure, Server/Client boundary, state management, testing, and Docker.
+
+When both are active, they complement each other — frontend-design guides how things look,
+this skill guides how things are structured and tested.
